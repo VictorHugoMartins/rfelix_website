@@ -1,0 +1,274 @@
+/﻿*------------------- SLIDER FRONT PAGE - NOVIDADES ----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.div-slider{
+    width: auto;
+    text-align: center;
+}
+
+.slides-front {
+    padding: 0;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.slides-front * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides-front input {
+    display: none;
+}
+
+.slide-container {
+    display: block; 
+}
+
+.slide { 
+    top: 0;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    margin-bottom: 40px;
+}
+
+.nav label {
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 56pt;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.slide:hover + .nav label {
+    opacity: 0.5;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+    height: 0px;
+}
+
+.nav .prev {
+    height: 0px;
+}
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out 0.1s;
+}
+
+input:checked + .slide-container .nav label {
+    display: block;
+}
+
+.nav-dots {
+	width: 100%;
+	height: 11px;
+	display: block;
+	position: relative;
+	text-align: right;
+}
+
+label img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-dots .nav-dot {
+	width: 38px;
+	height: 40px;
+	margin-left: 27px;
+    margin-top: 27px;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+label img: hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3, { 
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+.zoom {
+    overflow: hidden;
+}
+
+.zoom img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.zoom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 70%;
+}
+
+.text-item {
+    position: absolute;
+    width: 65%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    font-family: 'Roboto';
+    line-height: 30px;
+    font-size: 17px;
+}
+
+.slide .white-background {
+    position: absolute;
+    background: #000000;
+    opacity: 45%;
+}
+
+@media screen and (max-width: 1500px) {
+    .slides-front, .slide img {
+        width: 800px;
+        height: 400px;
+    }
+
+    .text-item {
+        left: 145px;
+        bottom: 17vh;
+        line-height: 30px;
+        font-size: 17px;
+    }
+
+    .slide .white-background {
+        left: 125px;
+        height: 70%;
+        width: 70%;
+        top: 70px;
+    }
+
+    .nav label {
+        width: 150px;
+        line-height: 400px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slides-front, .slide img {
+        width: 720px;
+        height: 360px;
+    }
+
+    .slide .white-background {
+        left: 105px;
+    }
+
+    .text-item {
+        left: 120px;
+        bottom: 10vh;
+        line-height: 25px;
+        font-size: 17px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 360px;
+        line-height: 360px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 350px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .slides-front, .slide img {
+        width: 490px;
+        height: 245px;
+    }
+
+    .slide .white-background {
+        left: 25px;
+        height: 85%;
+        width: 90%;
+        top: 20px;
+    }
+
+    .text-item {
+        left: 80px;
+        line-height: 20px;
+        bottom: 0px;
+    }
+
+    .nav label {
+        width: 90px;
+        line-height: 245px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 245px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 230px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slides-front, .slide img {
+        width: 285px;
+        height: 142px;
+    }
+
+    .slide .white-background, .text-item {
+        visibility: hidden;
+    }
+
+    .nav label {
+        width: 90px;
+        line-height: 142px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 142px;
+    }
+
+    .nav-dots .nav-dot {
+        top: 130px;
+    }
+}

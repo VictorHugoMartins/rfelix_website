@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+}
+
+.secao {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    background: #EEE8AA;
+}
+
+.secao .titulo {
+    display: grid;
+    color: #111A21;
+    align-self: center;
+    width: 100%;
+}
+
+.secao .titulo h1 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-align: center;
+}
+
+.secao a h1, h2 {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    text-decoration: none;
+    color: #;
+}
+
+.secao a:link, a:visited {
+    text-decoration: none;
+}
+
+.secao a h1:active {
+    text-decoration: none
+}
+
+@media screen and ( max-width: 1500px ){
+    .secao .titulo {
+        font-size: 17px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+}
+
+    @media screen and ( max-width: 900px ){
+        .secao .titulo {
+            font-size: 14px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and ( max-width: 550px ){
+        .secao .titulo {
+            font-size: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }

@@ -1,0 +1,610 @@
+/* MENU DROPDOWN */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+nav {
+    font-size:22px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    word-wrap:break-word !important;
+    font-family: 'Roboto';
+
+    background-color: #60401f;
+}
+
+nav a {
+    color: #FFF;
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+
+nav:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+nav ul {
+    float: right;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display:inline-block;
+    float: left;
+    background-color: #60401f;
+}
+
+/* Styling the links */
+nav a {
+    display:block;
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px;
+    text-decoration:none;
+}
+
+nav ul li ul li:hover { background: #3a2613; }
+
+/* Background color change on Hover */
+nav a:hover { 
+    background-color: #3a2613; 
+}
+
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute; 
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 60px; 
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers 
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+ */
+ nav ul ul ul li {
+    position: relative;
+    top:-60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */ 
+    left:170px; 
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+/* HEADER */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: #EEE8AA;
+}
+
+header .header {
+    display: grid;
+    width: auto;
+    background: #9a6432;
+    grid-template-rows: 25%;
+}
+
+header .titulo_site {
+    display: grid;
+    justify-items: center;
+}
+
+header .titulo_site h1 {
+    align-self: center;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+    width: 90vw;
+}
+
+header .titulo_site h3 {
+    letter-spacing: .2rem;
+    color: #fff;
+    margin-top: 0px;
+    text-align: center;
+    width: 60vw;
+}
+
+.secao {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    background: #EEE8AA;
+}
+
+.secao .titulo {
+    display: grid;
+    color: #111A21;
+    align-self: center;
+    width: 74%;
+}
+
+.secao .titulo h1 {
+    font-family: 'Roboto';
+    font-weight: bolder;
+    text-align: center;
+}
+
+.rodape {
+    height: 250px;
+    background: #9a6432;
+}
+
+a h1, h2 {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    text-decoration: none;
+    color: #;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a h1:active {
+    text-decoration: none
+}
+
+.blog-column {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.blog-column h5 {
+    margin-bottom: 15px;
+} 
+
+.grid {
+    display: grid;
+}
+
+.titulo-blog {
+    grid-area: titulo-blog;
+}
+
+.titulo-blog a {
+    color: #60401f;
+}
+
+.titulo-blog a: hover {
+    color: #3a2613;
+}
+
+.descricao {
+    grid-area: descricao;
+}
+
+.imagem {
+    display: grid;
+    place-items: center;
+    grid-area: imagem;
+
+    overflow: hidden;
+}
+
+.imagem img, .imagem iframe {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.imagem:hover img, .imagem:hover iframe {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 80%;
+}
+
+.texto {
+    grid-area: texto;
+    font-size: 13px;
+}
+
+.grid-template-areas-1 {
+    grid-template-areas:
+    "imagem titulo-blog titulo-blog"
+    "imagem descricao descricao"
+    "imagem texto texto"
+    "imagem advert advert"
+    ;
+}
+
+/* Grid Item */
+.item {
+    margin: 10px;
+    font-size: 1em;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+body > div > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.coluna-blog {
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    width: 90vw;
+}
+
+.grid-template-areas-1 {
+    width: 74vw;
+}
+
+.div_button {
+    width: 30%;
+    margin-top: 10px;
+}
+
+.div_button #read_button {
+    cursor: pointer;
+    width: 80%;
+    border: none;
+    background-color: #60401f;
+    color: white;
+    border-radius: 4%;
+}
+
+.div_button #read_button:hover {
+    background-color: #3a2613;
+}
+
+/* FOOTER */
+
+footer .rodape {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #9a6432;
+    color: #FFFFFF;
+    margin-top: 14vh;
+}
+
+footer .rodape .col {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer .rodape #titulo {
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    padding-bottom: 1%;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+}
+
+footer .social-media {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media screen and ( max-width: 1500px ){
+    nav a {
+        padding:14px 20px;
+    }
+
+    header .header {
+        height: 250px;
+    }
+    
+    .titulo_site h1 {
+        margin-top: 70px;
+        font-size: 45px;
+    }
+
+    
+    .titulo_site h3 {
+        font-size: 22px;
+    }
+
+    .secao .titulo {
+        font-size: 17px;
+        margin-top: 60px;
+    }
+
+    .titulo-blog {
+        margin-top: 60px;
+        font-size: 15px;
+    }
+
+    .div_button {
+        display: grid;
+        justify-items: center;
+    }
+
+    .div_button #read_button {
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .imagem img {
+        width: 231px;
+        height: 231px;
+    }
+
+    footer .rodape {
+        height: 200px;
+    }
+
+    footer .rodape #titulo {
+        font-size: 30px;
+    }
+
+    footer .rodape #text {
+        font-size: 16px;
+    }
+
+    footer .social-media img {
+        height: 30px;
+        width: 30px;
+        margin: 1vh;
+    }
+
+}
+
+@media screen and ( max-width: 900px ){
+    header .header {
+        height: 200px;
+    }
+    
+    .titulo_site h1 {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    .titulo_site h3 {
+        font-size: 17px;
+    }
+
+    .secao .titulo {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+    .titulo-blog {
+        margin-top: 40px;
+        font-size: 13px;
+    }
+
+    .imagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .texto {
+        font-size: 13px;
+    }
+
+    footer .rodape {
+        height: 170px;
+    }
+
+    footer .rodape #titulo {
+        font-size: 25px;
+    }
+
+    footer .rodape #text {
+        font-size: 14px;
+    }
+
+    footer .social-media img {
+        height: 25px;
+        width: 25px;
+        margin: 0.5vh;
+    }
+}
+
+@media screen and ( max-width: 550px ){
+    header .header {
+        height: 150px;
+    }
+
+    header .titulo_site h1 {
+        margin-top: 20px;
+        font-size: 35px;
+    }
+
+    header .titulo_site h3 {
+        font-size: 15px;
+    }
+
+    .secao .titulo {
+        font-size: 12px;
+        margin-top: 30px;
+    }
+
+    .imagem img {
+        margin-top: 30px;
+        width: 40vw;
+    }
+
+    .titulo-blog {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+
+    .titulo-blog a, .texto {
+        text-align: center;
+    }
+
+    .item {
+        display: grid;
+        justify-content: center;
+    }
+
+    .div_button #read_button {
+        width: 70vw;
+    }
+
+    .div_button {
+        float: none;
+        display: block;
+        justify-items: center;
+    }
+
+    .grid {
+        display: block;
+    }
+}
+
+@media all and (max-width : 400px) {
+    nav {
+        margin: 0;
+    }
+
+    nav ul {
+        float: left;
+        width: 100%;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        background-color: #3a2613;
+        padding:14px 20px;  
+        color:#FFF;
+        font-size:17px;
+        text-decoration:none;
+        border:none;
+    }
+
+    .toggle:hover {
+        background-color: #3a2613;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav a {
+        padding:10px 20px;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #3a2613;
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a{
+        padding:14px 20px;  
+        color:#FFF;
+        font-size:17px; 
+    }
+
+
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #212121; 
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position:static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */ 
+    }
+
+}
+
+@media all and (max-width : 330px) {
+    nav ul li {
+        display:block;
+        width: 100%;
+    }
+
+}

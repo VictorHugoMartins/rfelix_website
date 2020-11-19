@@ -1,0 +1,146 @@
+.secao .secaoEnvios body {
+    background: #EEE8AA;
+}
+
+.secao .secaoEnvios .form {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    border-bottom: 10vh;
+}
+
+.secao .secaoEnvios .titulo_campo {
+    font-weight: 500;
+    margin-bottom: 1vh;
+}
+
+.secao .secaoEnvios .campo_envio {
+    background-color: #F2F2F2;
+    margin-bottom: 3vh;
+    border: 1px solid;
+    border-color: #e6dd7f;
+}
+
+.secao .secaoEnvios .div_button {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    margin-top: 14px;
+}
+
+.secao .secaoEnvios .div_button #send_button {
+    cursor: pointer;
+    width: 70vw;
+    border: none;
+    background-color: #60401f;
+    color: white;
+}
+
+.secao .secaoEnvios .div_button #send_button:hover {
+    background-color: #3a2613;
+}
+
+.secao .secaoEnvios input[type=text],
+.secao .secaoEnvios input[type=file] {
+    padding: 10px 15px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.secao .secaoEnvios .inputfile-box {
+    background-color: #F2F2F2;
+    margin-bottom: 3vh;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid;
+    border-color: #e2d86a;
+}
+
+.secao .secaoEnvios .inputfile {
+    display: none;
+}
+
+.secao .secaoEnvios .file-box {
+    display: inline-block;
+    background-color: #F2F2F2;
+}
+
+.secao .secaoEnvios .file-button {
+    background: #60401f;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #ffffff;
+}
+
+.secao .secaoEnvios .file-button:hover {
+    background-color: #3a2613;
+}
+
+@media screen and ( max-width: 1500px) {
+    .secao .secaoEnvios .form .titulo h1 {
+        font-size: 40px;
+    }
+    .secao .secaoEnvios .titulo_campo {
+        font-size: 22px;
+    }
+    .secao .secaoEnvios .campo_envio {
+        font-size: 20px;
+    }
+    .secao .secaoEnvios .div_button #send_button {
+        height: 63px;
+        font-size: 22px;
+        margin-bottom: 14vh;
+    }
+    .secao .secaoEnvios .campo_envio,
+    .secao .secaoEnvios .file-box,
+    .secao .secaoEnvios .inputfile-box {
+        width: 70vw;
+        height: 63px;
+    }
+    .secao .secaoEnvios .file-button {
+        height: 24px;
+    }
+    .secao .secaoEnvios .inputfile-box {
+        font-size: 20px;
+    }
+}
+
+@media screen and ( max-width: 900px) {
+    .secao .secaoEnvios .titulo {
+        font-size: 14px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .secao .secaoEnvios .titulo_campo {
+        font-size: 15px;
+    }
+    .secao .secaoEnvios .campo_envio {
+        font-size: 13px;
+    }
+    .secao .secaoEnvios .div_button #send_button {
+        height: 45px;
+        font-size: 16px;
+        margin-bottom: 10vh;
+    }
+    .secao .secaoEnvios .campo_envio,
+    .secao .secaoEnvios .file-box,
+    .secao .secaoEnvios .inputfile-box {
+        height: 45px;
+    }
+    .secao .secaoEnvios .file-button {
+        height: 6px;
+    }
+    .secao .secaoEnvios .inputfile-box {
+        font-size: 14px;
+    }
+}
+
+@media screen and ( max-width: 550px) {
+    .secao .secaoEnvios .titulo {
+        font-size: 12px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

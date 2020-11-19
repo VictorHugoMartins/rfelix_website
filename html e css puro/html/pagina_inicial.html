@@ -1,0 +1,103 @@
+<!DOCTYPE html >
+<html lang="pt-br">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head >
+	<link rel="icon" 
+	type="image/png" 
+	href="../img/favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+	<title>
+		Blog | Ruan Felix
+	</title>
+	<link rel="stylesheet" type="text/css" href="../css/pagina_inicial.css"></link>
+</head>
+<body>
+	<header>
+		<nav>
+			<label for="drop" class="toggle">Menu</label>
+			<input type="checkbox" id="drop" />
+			<ul class="menu">
+				<li><a href="pagina_inicial.html">Home</a></li>
+				<li><a href="receitas.html">Galeria</a></li>
+				<li><a href="blog.html">Blog</a></li>
+			</ul>
+		</nav>
+		<div class="header">
+
+			<div class="titulo_pagina">
+				<h1>Ruan Felix</h1>
+				<h3>para quem gosta de comida de verdade!</h3>
+			</div>
+
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="slider">
+			<iframe src="slider.html" width="100%" height="100%" scrolling="no" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+
+		<!--incio do contato-->
+		<div class="secao">
+			<div class="titulo">
+				<h1>ENVIAR SUGESTÃO</h1>
+			</div>
+			<div class="form">
+				
+				<section class="grid grid-template-areas-3">
+					<div class="item name">
+						<h4 class="campo_titulo">SEU NOME:</h4>
+						<input type="text" class="campo_envio">
+					</div>
+					<div class="item tipo">
+						<h4 class="campo_titulo">NOME DA RECEITA:</h4>
+						<input type="text" class="campo_envio">
+					</div>
+					<div class="item desc">
+						<h4 class="campo_titulo">DESCRIÇÃO:</h4>
+						<input type="text" class="campo_envio">
+					</div>
+					<div class="item upload">
+						<h4 class="campo_titulo">UPLOAD DE ARQUIVO:</h4>
+						<div class="inputfile-box">
+							<input type="file" id="file" class="inputfile" >
+							<label for="file">
+								<span id="file-name" class="file-box"></span>
+								<span class="file-button">
+									<i class="fa fa-upload" aria-hidden="true"></i>
+									Selecionar
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="item send">
+						<div class="div_button">
+							<button id="send_button">ENVIAR</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="rodape">
+			<div class="col">
+				<h3>
+					<a href="#" id="titulo">Ruan Felix</a>
+				</h3>
+				<div id="text">Copyright © 2020 Ruan Felix.</div>
+				<div id="text">Todos os direitos reservados.</div>
+
+				<div class="social-media">
+					<a href="https://br.linkedin.com/"><img src="../img/linkedin.png" alt=""></a>
+					<a href="https://www.instagram.com/"><img src="../img/instagram.png" alt=""></a>
+					<a href="https://www.facebook.com/"><img src="../img/facebook.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
